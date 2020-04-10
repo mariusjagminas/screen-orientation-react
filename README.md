@@ -19,8 +19,7 @@ $ npm install screen-orientation-react
 
 ## Usage
 
-You can place  `<screenOrientationReact/>`  anywhere in your application. Under the hood the component uses    
- [screen-orientation-js](https://www.npmjs.com/package/screen-orientation-js) which renders `<div>` element containing a message, and appends it to `<body>`. When the component is active, `<div>`  element's styles will be set to `position: fixed; z-index: 9999` , so the message will always remains on the top.
+You can place  `<screenOrientationReact/>`  anywhere in your application. Under the hood the component uses [screen-orientation-js](https://www.npmjs.com/package/screen-orientation-js) which renders `<div>` element containing a message, and appends it to `<body>`. When the component is active, `<div>`  element's styles will be set to `position: fixed; z-index: 9999` , so the message will always remains on the top.
 
 ## Example 
 
@@ -44,7 +43,7 @@ class App extends React.Component {
        <screenOrientationReact options={options}/>
       </>
     )
-  }"Landscape orientation is not supported. 
+  }
 }
 ```
 
