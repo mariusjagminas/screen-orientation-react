@@ -1,22 +1,48 @@
 {
   "name": "screen-orientation-react",
-  "version": "0.0.0",
-  "description": "React component based on [screen-orientation-js](https://www.npmjs.com/package/screen-orientation-js)",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "React component which displays an animated full-screen message when the mobile device's screen is rotated horizontally.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {
+    "screen-orientation-js": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "nwb": "0.24.x",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "author": "Marius Jagminas",
+  "homepage": "https://github.com/mariusjagminas/screen-orientation-react#readme",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariusjagminas/screen-orientation-react.git"
   },
-  "keywords": [
-    "react"
-  ],
   "bugs": {
     "url": "https://github.com/mariusjagminas/screen-orientation-react/issues"
   },
-  "homepage": "https://github.com/mariusjagminas/screen-orientation-react#readme"
+  "keywords": [
+    "react",
+    "screen",
+    "orientation",
+    "landscape",
+    "portrait"
+  ]
 }
