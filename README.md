@@ -7,7 +7,7 @@
 
 React component which displays an animated full-screen message when the mobile device's screen is rotated horizontally.
 
-Some applications or websites may display content properly only in portrait orientation on the mobile devices. To prevent the website's layout from breaking , ```screenOrientationReact```  informs the user that the app can't be viewed in landscape orientation.
+Some applications or websites may display content properly only in portrait orientation on the mobile devices. To prevent the website's layout from breaking , ```<screenOrientationReact/>```  informs the user that the app can't be viewed in landscape orientation.
 
 ## Installation
 
@@ -39,9 +39,9 @@ class App extends React.Component {
   render() {
 
     return(
-      <>
+      <div>
        <screenOrientationReact options={options}/>
-      </>
+      </div>
     )
   }
 }
@@ -49,8 +49,9 @@ class App extends React.Component {
 
 ## Props
 
-### `options` [object]
+You can change the default settings by passing the config object to `options` prop. The component will use the default setting values ​​for non-passed values.
 
+<br/>
 
 | Key          | Value type| Description                                       | Default value                              |
 |:-------------|:----------|:--------------------------------------------------|:------------------------------------------ |
@@ -61,4 +62,4 @@ class App extends React.Component {
 | `animation:` | boolean   | The rotating phone animation.                     |  true                                      |
 | `iconColor:` | string    | Icon color.                                       |  #1D1D1D                                   |
 | `iconSize:`  | number    | Icon size.                                        |  10                                        |
-| `minHeight:` | number    | The viewport height in `.px` to display a message.|  500                                       |
+| `minHeight:` | number    | Min viewport height in landscape mode for the component to be inactive| 500                    
